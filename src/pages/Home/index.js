@@ -42,9 +42,6 @@ const Home = (props) => {
               </Link>
               .
             </Typography>
-            <Typography align="left" variant="body1" gutterBottom>
-              Trade your NFTs on the built in 0.00% fee marketplace.
-            </Typography>
           </Box>
           <Box mt={3} className={classes.centerMobile}>
             <Button className={classes.mintButton} component="a" href="/mint">
