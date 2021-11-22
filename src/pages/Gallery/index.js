@@ -55,15 +55,15 @@ const Gallery = () => {
     <Container className={classes.root}>
       <Typography variant="h4" className={classes.sectionTitle} gutterBottom>
         <Typography variant="h4" component="span">
-          RANDOM
+          FOMO
         </Typography>
         &nbsp;
         <Typography variant="h4" component="span" color="primary">
-          WALK
+          NFT
         </Typography>
         &nbsp;
         <Typography variant="h4" component="span">
-          NFT
+          DAO
         </Typography>
         &nbsp;
         <Typography variant="h4" component="span" color="secondary">

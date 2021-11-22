@@ -10,7 +10,8 @@ import {
 import getLibrary from "../utils/getLibrary";
 import { NetworkConnector } from "./NetworkConnector";
 
-const INFURA_KEY = process.env.REACT_APP_INFURA_KEY;
+// const INFURA_KEY = process.env.REACT_APP_INFURA_KEY;
+const INFURA_KEY = "61ED96HQAY6PASTEWRXN6AMYQEKM8SYTRY";
 
 if (typeof INFURA_KEY === "undefined") {
   throw new Error(

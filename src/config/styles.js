@@ -4,17 +4,17 @@ export const theme = createTheme({
   palette: {
     type: "dark",
     primary: {
-      main: "#C676D7",
+      main: "#adacac",
     },
     secondary: {
-      main: "#F4BFFF",
+      main: "#dbdbdb",
     },
     info: {
       main: "#FFFFFF",
     },
     text: {
       primary: "#FFFFFF",
-      secondary: "#C676D7",
+      secondary: "#adacac",
     },
     background: {
       default: "#000000",
@@ -33,10 +33,10 @@ export const theme = createTheme({
     },
     MuiCard: {
       root: {
-        border: "1px solid #F4BFFF",
+        border: "1px solid #dbdbdb",
         boxSizing: "border-box",
         borderRadius: 20,
-        boxShadow: "0px 0px 10px #C676D7",
+        boxShadow: "0px 0px 10px #adacac",
       },
     },
     MuiButton: {
@@ -76,7 +76,7 @@ export const theme = createTheme({
     },
     MuiAccordion: {
       root: {
-        border: "1px solid #F4BFFF",
+        border: "1px solid #dbdbdb",
         marginBottom: 16,
         padding: "12px 16px",
       },
@@ -110,7 +110,7 @@ const useStyles = makeStyles(
       width: 265,
       height: "100%",
       backgroundColor: "#200C31",
-      borderLeft: "1px solid #F4BFFF",
+      borderLeft: "1px solid #dbdbdb",
     },
     appBar: {
       backgroundColor: "#000",
@@ -175,7 +175,7 @@ const useStyles = makeStyles(
     },
     nftPrice: {
       borderRadius: 3,
-      backgroundColor: "#C676D7",
+      backgroundColor: "#adacac",
       padding: "3px 12px",
       marginTop: 12,
     },
@@ -210,7 +210,7 @@ const useStyles = makeStyles(
       width: 128,
       height: 128,
       borderRadius: "100%",
-      border: "1px solid #F4BFFF",
+      border: "1px solid #dbdbdb",
       backgroundColor: "#303030",
     },
     tablePrimary: {

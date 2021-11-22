@@ -85,11 +85,11 @@ const ConnectWalletButton = ({ isMobileView }) => {
               MY NFTS
             </Link>
           </MenuItem>
-          <MenuItem onClick={handleMenuClose}>
+          {/* <MenuItem onClick={handleMenuClose}>
             <Link className={classes.navItem} to={"/my-offers"}>
               MY OFFERS
             </Link>
-          </MenuItem>
+          </MenuItem> */}
         </Menu>
       </>
     );

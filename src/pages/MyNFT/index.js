@@ -23,6 +23,7 @@ const MyNFTs = () => {
         const contract = new ethers.Contract(NFT_ADDRESS, abi, library);
         const tokens = await contract.walletOfOwner(account);
         const nftIds = tokens.map((t) => t.toNumber());
+        console.log('nftIds', nftIds)
         if (isSubscribed) {
           setNftIds(nftIds);
           setLoading(false);
@@ -49,15 +50,11 @@ const MyNFTs = () => {
           </Typography>
           &nbsp;
           <Typography variant="h4" component="span">
-            RANDOM
+            FOMO
           </Typography>
           &nbsp;
           <Typography variant="h4" component="span" color="primary">
-            WALK
-          </Typography>
-          &nbsp;
-          <Typography variant="h4" component="span">
-            NFTS
+            NFTs
           </Typography>
         </Typography>
         <PaginationGrid loading={loading} data={nftIds} />

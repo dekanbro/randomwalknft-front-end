@@ -21,7 +21,7 @@ import QuestionIcon from "assets/svg/question_icon.svg";
 const FAQ = () => {
   const items = [
     {
-      summary: "How do I mint Random Walk NFTs?",
+      summary: "How do I mint FOMO NFTs?",
       detail:
         "You need <a style='color: #fff' href='https://metamask.io'>MetaMask</a> extension installed in your browser. " +
         "You need some ETH on Arbitrum. You can transfer ETH from Ethereum to Arbitrum using <a style='color: #fff' href='https://hop.exchange'>Hop</a>, " +
@@ -33,19 +33,16 @@ const FAQ = () => {
         "Check out this <a style='color: #fff' href='https://help.uniswap.org/en/articles/5538707-how-to-connect-to-arbitrum'>simple guide</a>.",
     },
     {
-      summary: "How many Random Walk NFTs will there be?",
+      summary: "How many FOMO NFTs will there be?",
       detail:
-        "Every time an NFT is minted, the price of the next mint increases by about 0.1%. After 5,000 NFTs are minted, mint price would be 0.24 ETH. After 10,000 NFTs are minted, mint price would be about 60 ETH. " +
-        "Given the exponential increase in price, it's hard to imagine there being more than a few thousand NFTs in existence.",
+        "Every time an NFT is minted, the price of the next mint increases by about 0.1%.",
     },
     {
       summary: "Where does the ETH go that people paid for minting?",
       detail:
         "We are doing a social experiment with it! " +
-        "ETH will be distributed to some of the minters. After there hasn't been a mint for 30 days, the last minter is eligible to withdraw half of the ETH in the NFT contract. " +
-        "The other half would stay in the contract and would be distributed using the same mechanism. For example, suppose Minter A is the last minter and there is 100 ETH in the contract. " +
-        "There is no mint for 30 days and Minter A withdraws 50 ETH. Minter B now mints and there is no mint for 30 days. Minter B can now withdraw 25 ETH. It would take many withdrawal events " +
-        "to get all the ETH from the contract.",
+        "ETH will be distributed to some of the minters. After there hasn't been a mint for 3 days, the last minter is eligible to withdraw 20% of the ETH in the NFT contract. " +
+        "%80 will go to a DAO of previous minters that tribute their NFT to the DAO.",
     },
     {
       summary: "Are the contracts verified on Etherscan?",
@@ -56,30 +53,34 @@ const FAQ = () => {
     {
       summary: "What is the fee for using the market to buy and sell NFTs?",
       detail:
-        "The fee is 0.00%! (It's free)",
+        "The fee is 20%. It goes to the DAO working fund to pay for ops, the DAO can manage it how every they feel.",
     },
     {
       summary: "How are the NFT images generated?",
       detail:
-        "When you mint, a random number (called a seed) is generated for each NFT by the smart contract. We use the seed in the Python script to generate an image and videos.",
+        "When you mint, a SVG is minted on chain. The DAO has the ability to change the background for each round through governance",
     },
     {
-      summary: "What is a Random Walk",
-      detail:
-        "Imagine you are standing on a 2D plane. You can take a step in one of the 4 directions (forward, back, left, right). Imagine you decide the direction of your step randomly. " +
-        "If you do this a few million times and plot it you will you will get images that look like Random Walk NFTs.",
+      summary: "How Do I join the DAO",
+      detail: "See this tutorial <a style='color: #fff' href='https://app.daohaus.club/dao/0xa4b1/0xf2ebff62ff6cc2e90f2ec0f1a6a241d3628d810d/'>DAO</a>",
     },
     {
-      summary: "How are the colors generated?",
+      summary: "How Does the DAO work?",
       detail:
-        "By doing a random walk in the color space! At each step we modify the value of red, blue and green. So we are actually doing a random walk in a 5 dimensional space (2 spacial dimensions and 3 color dimensions).",
+        "There are 2 types of ownership in a Moloch DAO, loot holders and share holders. Loot holders have pure economic rights meaning they can rage quit with their fair share of the treasury at any time. Share holders have this but also have execution responsibility, they can vote on new member proposals and build transaction to execute against the DAO funds." +
+        "A NFT tribute gets 100 loot shares and its the responsibility of the share holders to vote them in." +
+        "To start the DAO has 14 share holding members (just cloned the members of the arbitrum nft grant dao) with 10 shares each. anyone can apply to become a share holder if they want to help take on the responsibility of managing the operations of the dao.",
     },
     {
       summary: "Does the creator of the NFT get any special privileges?",
+      detail: "No",
+    },
+    {
+      summary: "How is this related to Random Walk NFT",
       detail:
-        "No, once the contract is deployed, nobody has any special privileges. The creator of the NFT would have to buy the NFTs like everybody else. The creator does not get the ETH that people paid for minting. " +
-        "The ETH would be distributed to some of the minters as described above. " +
-        "This is inspired by how Satoshi launched Bitcoin. He did not give himself any special privileges and had to mine the coin like everybody else. ",
+        "It is not associated with it in any way. " +
+        "The code was forked and modified from the random walk contract and frontend. " +
+        "Find details about that project here <a style='color: #fff' href='https://mirror.xyz/dekan.eth/g0N2iuLqYWsQPVHUsqipdKOurDRMuQ39UN6-VctHyR8'>More Info</a>",
     },
   ];
 
@@ -149,11 +150,11 @@ const FAQ = () => {
                 >
                   Have more questions, reach out to us on&nbsp;
                   <Link color="primary" href="https://twitter.com">
-                    Twitter
+                    Twitter (Coming Soon)
                   </Link>
                   &nbsp;or&nbsp;
                   <Link color="primary" href="https://discord.com">
-                    Discord
+                    Discord (coming soon)
                   </Link>
                 </Typography>
               </Box>

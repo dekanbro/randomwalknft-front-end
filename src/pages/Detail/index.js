@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { useParams } from "react-router-dom";
 
 import { Container, Box, Divider } from "@material-ui/core";
-import { Alert, ToggleButton, ToggleButtonGroup } from "@material-ui/lab";
+import { Alert } from "@material-ui/lab";
 
 import useStyles from "config/styles";
 import { useNFT } from "hooks/useNFT";
-import { useBuyOfferIds, useSellTokenIds } from "hooks/useOffer";
-import { useActiveWeb3React } from "hooks/web3";
+// import { useActiveWeb3React } from "hooks/web3";
 
 import { Trait } from "./Trait";
-import { BuyOffers } from "./BuyOffers";
 
 import "./index.css";
 
@@ -20,28 +18,8 @@ const Detail = () => {
   const { id } = useParams();
   const { location } = useHistory();
   const nft = useNFT(id);
-  const buyOffers = useBuyOfferIds(id);
-  const { account, library } = useActiveWeb3React();
-  const sellTokenIds = useSellTokenIds(account);
-  const [darkTheme, setDarkTheme] = useState(true);
-
-  useEffect(() => {
-    const darkModes = [
-      "#black_image",
-      "#black_single_video",
-      "#black_triple_video",
-    ];
-    const lightModes = [
-      "#white_image",
-      "#white_single_video",
-      "#white_triple_video",
-    ];
-    if (darkModes.includes(location.hash)) {
-      setDarkTheme(true);
-    } else if (lightModes.includes(location.hash)) {
-      setDarkTheme(false);
-    }
-  }, [location]);
+  // const { account, library } = useActiveWeb3React();
+  const [darkTheme] = useState(true);
 
   if (!nft) return <></>;
 
@@ -65,27 +43,11 @@ const Detail = () => {
         style={{ position: "relative", height: 60 }}
       >
         <Divider style={{ background: "#121212", width: "100%" }} />
-        <ToggleButtonGroup
-          value={darkTheme}
-          exclusive
-          onChange={() => setDarkTheme(!darkTheme)}
-          style={{ position: "absolute" }}
-        >
-          <ToggleButton value={true}>Dark theme</ToggleButton>
-          <ToggleButton value={false}>White theme</ToggleButton>
-        </ToggleButtonGroup>
       </Box>
       <Trait
         nft={nft}
         darkTheme={darkTheme}
         seller={location.state ? location.state.seller : null}
-      />
-      <BuyOffers
-        offers={buyOffers}
-        nft={nft}
-        account={account}
-        library={library}
-        sellTokenIds={sellTokenIds}
       />
     </Container>
   );

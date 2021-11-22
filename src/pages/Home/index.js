@@ -9,8 +9,6 @@ import {
 } from '@material-ui/core'
 
 import whiteLineImage from 'assets/white_line.png'
-import linesImage from 'assets/lines.png'
-import backImage from 'assets/back.png'
 import useStyles from 'config/styles'
 
 const Home = (props) => {
@@ -18,38 +16,21 @@ const Home = (props) => {
 
   return (
     <>
-      <img
-        src={linesImage}
-        alt="lines"
-        style={{
-          position: 'fixed',
-          bottom: 100,
-          objectFit: 'fill',
-          height: 400,
-          minWidth: '100%',
-        }}
-      />
       <div
-        style={{
-          backgroundImage: `url(${backImage})`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center center',
-          height: '100vh',
-        }}
+
       >
         <Container className={classes.root}>
           <Typography variant="h4" className={classes.centerMobile}>
             <Typography variant="h4" component="span" color="primary">
-              RANDOM
+              FOMO
             </Typography>
             &nbsp;
             <Typography variant="h4" component="span">
-              WALK
+              NFT
             </Typography>
             &nbsp;
             <Typography variant="h4" component="span" color="secondary">
-              NFT
+              DAO
             </Typography>
           </Typography>
           <Box mt={3}>

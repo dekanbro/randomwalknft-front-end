@@ -132,10 +132,10 @@ const Redeem = () => {
       <Paper>
         <Box my={4} p={3}>
           <Typography variant="body2" style={{ lineHeight: 2 }}>
-            If nobody mints for 30 days after the last mint, last minter can
-            withdraw 50% of all the ETH that was spent on minting up to that
-            point. (ETH spent on minting does not go to the creators of the NFT,
-            it goes back to the minters through this mechanism.)
+            If nobody mints for 3 days after the last mint, last minter can
+            withdraw 20% of all the ETH that was spent on minting up to that
+            point. The remaining 80% goes back to previous minters that have
+            joined the DAO.
           </Typography>
         </Box>
       </Paper>

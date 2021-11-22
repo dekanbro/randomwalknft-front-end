@@ -12,9 +12,9 @@ const Counter = ({ days, hours, minutes, seconds, completed }) => {
   const counterItem = {
     width: isMobile ? "80%" : "20%",
     padding: "8px 0",
-    border: "2px solid #F4BFFF",
+    border: "2px solid #dbdbdb",
     boxSizing: "border-box",
-    boxShadow: "0px 0px 10px #C676D7",
+    boxShadow: "0px 0px 10px #adacac",
     marginBottom: isMobile ? 24 : 0,
   };
 

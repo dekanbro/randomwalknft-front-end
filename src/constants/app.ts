@@ -1,2 +1,4 @@
-export const NFT_ADDRESS = process.env.REACT_APP_NFT_ADDRESS;
-export const MARKET_ADDRESS = process.env.REACT_APP_MARKET_ADDRESS;
+// export const NFT_ADDRESS = process.env.REACT_APP_NFT_ADDRESS;
+// export const MARKET_ADDRESS = process.env.REACT_APP_MARKET_ADDRESS;
+export const NFT_ADDRESS = "0x7f20b38375e0Ab8881aDC7b3435d5084667106DF";
+export const MARKET_ADDRESS = "0x47eF85Dfb775aCE0934fBa9EEd09D22e6eC0Cc08";

@@ -18,8 +18,6 @@ import useStyles from "config/styles";
 import ConnectWalletButton from "components/ConnectWalletButton";
 import { useActiveWeb3React } from "hooks/web3";
 
-import logoImage from "assets/logo.svg";
-
 const NavBar = () => {
   const classes = useStyles();
   const [state, setState] = useState({
@@ -49,7 +47,7 @@ const NavBar = () => {
   const renderDesktop = () => {
     return (
       <Toolbar disableGutters>
-        <img src={logoImage} alt="RandomWalkNFT" />
+        {/* <img src={logoImage} alt="RandomWalkNFT" /> */}
         {NAV_SECTIONS.map(
           (nav, i) =>
             (!nav.auth || account) && (
@@ -73,7 +71,7 @@ const NavBar = () => {
 
     return (
       <Toolbar>
-        <img src={logoImage} alt="RandomWalkNFT" />
+        {/* <img src={logoImage} alt="RandomWalkNFT" /> */}
         <IconButton
           aria-label="menu"
           aria-haspopup="true"
@@ -113,15 +111,7 @@ const NavBar = () => {
                 My NFTs
               </Link>
             </ListItem>
-            <ListItem style={{ justifyContent: "center" }}>
-              <Link
-                className={classes.navItem}
-                href="/my-offers"
-                onClick={handleDrawerClose}
-              >
-                My Offers
-              </Link>
-            </ListItem>
+
           </List>
         </Drawer>
       </Toolbar>

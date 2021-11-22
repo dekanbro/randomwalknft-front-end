@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Typography, Card, CardActionArea, CardMedia } from "@material-ui/core";
+import { Typography, Card, CardActionArea } from "@material-ui/core";
 import Skeleton from "@material-ui/lab/Skeleton";
 
 import useStyles from "config/styles";
@@ -10,6 +10,7 @@ import { formatId } from "utils";
 const NFT = ({ tokenId }) => {
   const classes = useStyles();
   const nft = useNFT(tokenId);
+  console.log("nft1", nft)
 
   return (
     <Card>
@@ -21,10 +22,7 @@ const NFT = ({ tokenId }) => {
             className={classes.nftImage}
           />
         ) : (
-          <CardMedia
-            className={classes.nftImage}
-            image={nft.black_image_thumb}
-          />
+          <embed src={nft.image} />
         )}
         {nft && (
           <Typography className={classes.nftInfo} variant="body1">
