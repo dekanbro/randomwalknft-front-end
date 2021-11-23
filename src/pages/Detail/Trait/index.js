@@ -21,8 +21,8 @@ import "react-awesome-lightbox/build/style.css";
 import "react-modal-video/css/modal-video.min.css";
 
 import abi from "abis/nft";
-import marketABI from "abis/market";
-import { MARKET_ADDRESS, NFT_ADDRESS } from "constants/app";
+// import marketABI from "abis/market";
+import {  NFT_ADDRESS } from "constants/app";
 import useStyles from "config/styles";
 import { useActiveWeb3React } from "hooks/web3";
 import { formatId } from "utils";
@@ -68,7 +68,7 @@ export const Trait = ({ nft, darkTheme, seller }) => {
   // const [open, setOpen] = useState(false);
   const [imageOpen, setImageOpen] = useState(false);
   // const [sellPrice, setSellPrice] = useState(null);
-  const [price, setPrice] = useState("");
+  // const [price, ] = useState("");
   const [address, setAddress] = useState("");
   const [accountTokenIds, setAccountTokenIds] = useState([]);
 
@@ -77,29 +77,29 @@ export const Trait = ({ nft, darkTheme, seller }) => {
   const { account, library } = useActiveWeb3React();
   const history = useHistory();
 
-  const handleMakeSell = async () => {
-    const signer = library.getSigner();
-    const contract = new ethers.Contract(NFT_ADDRESS, abi, signer);
-    const market = new ethers.Contract(MARKET_ADDRESS, marketABI, signer);
+  // const handleMakeSell = async () => {
+  //   const signer = library.getSigner();
+  //   const contract = new ethers.Contract(NFT_ADDRESS, abi, signer);
+  //   const market = new ethers.Contract(MARKET_ADDRESS, marketABI, signer);
 
-    try {
-      const approvedAll = await contract.isApprovedForAll(
-        account,
-        MARKET_ADDRESS
-      );
-      if (!approvedAll) {
-        await contract
-          .setApprovalForAll(MARKET_ADDRESS, true)
-          .then((tx) => tx.wait());
-      }
-      await market
-        .makeSellOffer(NFT_ADDRESS, id, ethers.utils.parseEther(price))
-        .then((tx) => tx.wait());
-      window.location.reload();
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  //   try {
+  //     const approvedAll = await contract.isApprovedForAll(
+  //       account,
+  //       MARKET_ADDRESS
+  //     );
+  //     if (!approvedAll) {
+  //       await contract
+  //         .setApprovalForAll(MARKET_ADDRESS, true)
+  //         .then((tx) => tx.wait());
+  //     }
+  //     await market
+  //       .makeSellOffer(NFT_ADDRESS, id, ethers.utils.parseEther(price))
+  //       .then((tx) => tx.wait());
+  //     window.location.reload();
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   const handleTransfer = async () => {
     const signer = library.getSigner();
@@ -329,30 +329,6 @@ export const Trait = ({ nft, darkTheme, seller }) => {
                           onClick={handleTransfer}
                         >
                           Send
-                        </Button>
-                      </Box>
-                    </Box>
-                    <Box mb={3}>
-                      <Typography gutterBottom variant="h6" align="left">
-                        PUT ON SALE
-                      </Typography>
-                      <Box display="flex">
-                        <TextField
-                          type="number"
-                          variant="filled"
-                          color="secondary"
-                          placeholder="Enter ETH price here"
-                          value={price}
-                          size="small"
-                          style={{ flex: 1 }}
-                          onChange={(e) => setPrice(e.target.value)}
-                        />
-                        <Button
-                          color="secondary"
-                          variant="contained"
-                          onClick={handleMakeSell}
-                        >
-                          Sell
                         </Button>
                       </Box>
                     </Box>

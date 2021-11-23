@@ -19,9 +19,9 @@ import Counter from "components/Counter";
 import abi from "abis/nft";
 import pinkLineImage from "assets/pink_line.png";
 import useStyles from "config/styles";
-import { NFT_ADDRESS, MARKET_ADDRESS } from "constants/app";
+import { NFT_ADDRESS } from "constants/app";
 import { useActiveWeb3React } from "hooks/web3";
-import nftService from "services/nft";
+// import nftService from "services/nft";
 
 import "react-slideshow-image/dist/styles.css";
 
@@ -30,7 +30,7 @@ const MintView = () => {
   const [countdownCompleted, setCountdownCompleted] = useState(false);
   const [mintPrice, setMintPrice] = useState(0);
   const [withdrawalAmount, setWithdrawalAmount] = useState(0);
-  const [, setTokenIds] = useState([]);
+  // const [, setTokenIds] = useState([]);
 
   const { account, library } = useActiveWeb3React();
   const history = useHistory();
@@ -47,7 +47,9 @@ const MintView = () => {
         const contract = new ethers.Contract(NFT_ADDRESS, abi, signer);
 
         const mintPrice = await contract.getMintPrice();
-        const newPrice = ethers.utils.formatEther(mintPrice) * 1.01;
+        const newPrice = ethers.utils.formatEther(mintPrice) * 1.0188;
+        console.log('newPrice', newPrice);
+        console.log('newPrice util', ethers.utils.parseEther(newPrice.toFixed(4)));
 
         const receipt = await contract
           .mint({ value: ethers.utils.parseEther(newPrice.toFixed(4)) })
@@ -55,11 +57,11 @@ const MintView = () => {
 
         const token_id = receipt.events[0].args.tokenId.toNumber();
 
-        await nftService.create(token_id);
+        // await nftService.create(token_id);
 
         history.push(`/detail/${token_id}`, {
           message:
-            "Media files are being generated. Please refrersh the page in a few minutes.",
+            "NFT is being minted.",
         });
       } catch (err) {
         const { data } = err;
@@ -93,8 +95,8 @@ const MintView = () => {
       let seconds = (await contract.timeUntilSale()).toNumber();
       setSaleSeconds(seconds);
 
-      const tokenIds = await nftService.random();
-      setTokenIds(tokenIds);
+      // const tokenIds = await nftService.random();
+      // setTokenIds(tokenIds);
     };
 
     getData();
@@ -166,20 +168,6 @@ const MintView = () => {
                   href={`https://arbiscan.io/address/${NFT_ADDRESS}#code`}
                 >
                   {NFT_ADDRESS}
-                </MuiLink>
-              </Typography>
-            </Box>
-            <Box mb={3}>
-              <Typography variant="body1" color="secondary" gutterBottom>
-                Verified Market Contract
-              </Typography>
-              <Typography variant="body2" gutterBottom>
-                <MuiLink
-                  color="textPrimary"
-                  target="_blank"
-                  href={`https://arbiscan.io/address/${MARKET_ADDRESS}#code`}
-                >
-                  {MARKET_ADDRESS}
                 </MuiLink>
               </Typography>
             </Box>
