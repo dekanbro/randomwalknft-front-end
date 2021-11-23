@@ -42,18 +42,13 @@ const FAQ = () => {
       detail:
         "We are doing a social experiment with it! " +
         "ETH will be distributed to some of the minters. After there hasn't been a mint for 3 days, the last minter is eligible to withdraw 20% of the ETH in the NFT contract. " +
-        "%80 will go to a DAO of previous minters that tribute their NFT to the DAO.",
+        "%80 will go to a DAO of previous minters that tribute their NFT to the DAO." +
+        "Find details about this project here <a style='color: #fff' href='https://randomwalknft.com/'>More Info</a>",
     },
     {
       summary: "Are the contracts verified on Etherscan?",
       detail:
-        "Check out this <a style='color: #fff' href='https://arbiscan.io/address/0x895a6F444BE4ba9d124F61DF736605792B35D66b#code'>NFT Contract</a>, " +
-        "<a style='color: #fff' href='https://arbiscan.io/address/0x47eF85Dfb775aCE0934fBa9EEd09D22e6eC0Cc08#code'>Market Contract</a>.",
-    },
-    {
-      summary: "What is the fee for using the market to buy and sell NFTs?",
-      detail:
-        "The fee is 20%. It goes to the DAO working fund to pay for ops, the DAO can manage it how every they feel.",
+        "Check out this <a style='color: #fff' href='https://mirror.xyz/dekan.eth/g0N2iuLqYWsQPVHUsqipdKOurDRMuQ39UN6-VctHyR8'>NFT Contract</a>, ",
     },
     {
       summary: "How are the NFT images generated?",
@@ -61,7 +56,11 @@ const FAQ = () => {
         "When you mint, a SVG is minted on chain. The DAO has the ability to change the background for each round through governance",
     },
     {
-      summary: "How Do I join the DAO",
+      summary: "Why should I join the DAO?",
+      detail: "Think of it like plating a seed. You mint the NFT to get the seed and you plant it in the dao to get some percentage of the future withdraws.",
+    },
+    {
+      summary: "How Do I join the DAO?",
       detail: "See this tutorial <a style='color: #fff' href='https://app.daohaus.club/dao/0xa4b1/0xf2ebff62ff6cc2e90f2ec0f1a6a241d3628d810d/'>DAO</a>",
     },
     {
@@ -79,8 +78,8 @@ const FAQ = () => {
       summary: "How is this related to Random Walk NFT",
       detail:
         "It is not associated with it in any way. " +
-        "The code was forked and modified from the random walk contract and frontend. " +
-        "Find details about that project here <a style='color: #fff' href='https://mirror.xyz/dekan.eth/g0N2iuLqYWsQPVHUsqipdKOurDRMuQ39UN6-VctHyR8'>More Info</a>",
+        "The code was forked and modified from the Random Walk contract and frontend. " +
+        "Find details about that project here <a style='color: #fff' href='https://randomwalknft.com/'>More Info</a>",
     },
   ];
 
