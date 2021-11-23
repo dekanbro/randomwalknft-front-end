@@ -82,7 +82,7 @@ const MintView = () => {
       const mintPrice = await contract.getMintPrice();
       setMintPrice(
         (
-          parseFloat(ethers.utils.formatEther(mintPrice)) * 1.01 +
+          parseFloat(ethers.utils.formatEther(mintPrice)) * 1.0188 +
           0.008
         ).toFixed(4)
       );
