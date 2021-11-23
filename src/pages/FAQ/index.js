@@ -43,12 +43,12 @@ const FAQ = () => {
         "We are doing a social experiment with it! " +
         "ETH will be distributed to some of the minters. After there hasn't been a mint for 3 days, the last minter is eligible to withdraw 20% of the ETH in the NFT contract. " +
         "%80 will go to a DAO of previous minters that tribute their NFT to the DAO." +
-        "Find details about this project here <a style='color: #fff' href='https://randomwalknft.com/'>More Info</a>",
+        "Find details about this project here <a style='color: #fff' href='https://mirror.xyz/dekan.eth/g0N2iuLqYWsQPVHUsqipdKOurDRMuQ39UN6-VctHyR8'>More Info</a>",
     },
     {
       summary: "Are the contracts verified on Etherscan?",
       detail:
-        "Check out this <a style='color: #fff' href='https://mirror.xyz/dekan.eth/g0N2iuLqYWsQPVHUsqipdKOurDRMuQ39UN6-VctHyR8'>NFT Contract</a>, ",
+        "Check out this <a style='color: #fff' href='https://arbiscan.io/address/0x7f20b38375e0Ab8881aDC7b3435d5084667106DF#code'>NFT Contract</a>, ",
     },
     {
       summary: "How are the NFT images generated?",
@@ -61,7 +61,9 @@ const FAQ = () => {
     },
     {
       summary: "How Do I join the DAO?",
-      detail: "See this tutorial <a style='color: #fff' href='https://app.daohaus.club/dao/0xa4b1/0xf2ebff62ff6cc2e90f2ec0f1a6a241d3628d810d/'>DAO</a>",
+      detail: "See this tutorial <a style='color: #fff' href='https://www.loom.com/share/4f762a3969484a04bd3f5cd2dc6a7194'>DAO</a> " +
+      "make a NFT tribute proposal to the dao for 100 loot. After a 2 day voting period you will be a member. ",
+      "<a style='color: #fff' href='https://app.daohaus.club/dao/0xa4b1/0xf2ebff62ff6cc2e90f2ec0f1a6a241d3628d810d/proposals'>The DAO</a>",
     },
     {
       summary: "How Does the DAO work?",
