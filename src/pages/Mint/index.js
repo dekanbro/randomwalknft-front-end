@@ -48,8 +48,8 @@ const MintView = () => {
 
         const mintPrice = await contract.getMintPrice();
         const newPrice = ethers.utils.formatEther(mintPrice) * 1.0188 + .001;
-        console.log('newPrice', newPrice);
-        console.log('newPrice util', ethers.utils.parseEther(newPrice.toFixed(4)));
+        // console.log('newPrice', newPrice);
+        // console.log('newPrice util', ethers.utils.parseEther(newPrice.toFixed(4)));
 
         const receipt = await contract
           .mint({ value: ethers.utils.parseEther(newPrice.toFixed(4)) })
