@@ -92,7 +92,7 @@ const Giveaway = () => {
           </Typography>
           &nbsp;
           <a
-            href="https://twitter.com/randomwalknft"
+            href="https://twitter.com/fomo_nft_dao"
             target="_blank"
             style={{ color: "#CC76D7", textDecoration: "none" }}
             rel="noreferrer"

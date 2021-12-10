@@ -150,12 +150,12 @@ const FAQ = () => {
                   style={{ lineHeight: 2 }}
                 >
                   Have more questions, reach out to us on&nbsp;
-                  <Link color="primary" href="https://twitter.com">
-                    Twitter (Coming Soon)
+                  <Link color="primary" href="https://twitter.com/fomo_nft_dao">
+                    Twitter 
                   </Link>
                   &nbsp;or&nbsp;
-                  <Link color="primary" href="https://discord.com">
-                    Discord (coming soon)
+                  <Link color="primary" href="https://discord.gg/R3d92S7tdj">
+                    Discord 
                   </Link>
                 </Typography>
               </Box>

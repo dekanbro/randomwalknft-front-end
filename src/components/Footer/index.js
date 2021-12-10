@@ -48,12 +48,12 @@ const Footer = () => {
               </Typography>
             </Box>
             <IconButton
-              href="https://twitter.com/RandomWalkNFT"
+              href="https://twitter.com/fomo_nft_dao"
               target="_blank"
             >
               <FontAwesomeIcon icon={faTwitter} size="xs" color="#adacac" />
             </IconButton>
-            <IconButton href="https://discord.gg/bGnPn96Qwt" target="_blank">
+            <IconButton href="https://discord.gg/R3d92S7tdj" target="_blank">
               <FontAwesomeIcon icon={faDiscord} size="xs" color="#adacac" />
             </IconButton>
           </Box>
